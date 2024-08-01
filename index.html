@@ -13,13 +13,14 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
 
         .container {
             text-align: center;
             padding: 20px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
@@ -31,7 +32,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             border: 1px solid #ccc;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -99,8 +100,11 @@
                 document.getElementById('firstPage').style.display = 'none';
                 document.getElementById('popup').style.display = 'none';
                 document.getElementById('secondPage').style.display = 'flex';
+            } else if (answer.includes("帅")) {
+                alert("哎呀回答的很好呢，可惜答案只有一个字哦宝贝");
+                document.getElementById('answer').value = ''; // 清空输入框
             } else {
-                alert("您失去了参加余禛生日聚会的资格！");
+                alert("臭大便瞎输什么呢，我一刀杀了你");
                 window.close(); // 尝试关闭浏览器窗口
             }
         }
